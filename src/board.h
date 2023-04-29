@@ -1,7 +1,12 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#define SLAVE_ID                "HOMEd Modbus Controller"
+#define SLAVE_ID                "HOMEd Relay Controller"
+
+#define SR_GPIO                 GPIOA
+#define SR_DATA_PIN             GPIO_Pin_0
+#define SR_LATCH_PIN            GPIO_Pin_1
+#define SR_CLK_PIN              GPIO_Pin_2
 
 #define LED_GPIO                GPIOA
 #define LED_PIN                 GPIO_Pin_3

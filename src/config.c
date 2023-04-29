@@ -12,6 +12,7 @@ void configInit(void)
     {
         config.baudrate = 1152;
         config.address = 1;
+        config.invert = 0;
     }
 }
 

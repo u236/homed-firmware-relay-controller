@@ -65,6 +65,8 @@ src/crc.h
 src/main.c
 src/modbus.c
 src/modbus.h
+src/output.c
+src/output.h
 src/register.c
 src/register.h
 system/startup_stm32f0xx.S

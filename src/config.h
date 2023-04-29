@@ -9,6 +9,7 @@ struct configStruct
 {
     uint8_t  address;
     uint16_t baudrate;
+    uint8_t  invert;
     uint16_t crc;
 };
 

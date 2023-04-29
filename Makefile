@@ -5,7 +5,7 @@ HX   = arm-none-eabi-objcopy -O ihex
 BN   = arm-none-eabi-objcopy -O binary
 SZ   = arm-none-eabi-size
 
-TGT  = modbus-controller
+TGT  = relay-controller
 DIR  = ./build
 LDS  = ./stm32f0.ld
 

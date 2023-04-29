@@ -9,6 +9,9 @@ static void boardInitGPIO(void)
     GPIO_StructInit(&GPIO_InitStruct);
     GPIO_InitStruct.GPIO_Mode = GPIO_Mode_OUT;
 
+    GPIO_InitStruct.GPIO_Pin = SR_CLK_PIN | SR_LATCH_PIN | SR_DATA_PIN;
+    GPIO_Init(SR_GPIO, &GPIO_InitStruct);
+
     GPIO_InitStruct.GPIO_Pin = LED_PIN;
     GPIO_Init(LED_GPIO, &GPIO_InitStruct);
 
