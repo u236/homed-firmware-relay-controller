@@ -37,6 +37,7 @@
 #include "stm32f0xx_conf.h"
 
 extern uint32_t uptime;
+extern uint8_t blink;
 
 void boardInitUART(void);
 void boardInit(void);

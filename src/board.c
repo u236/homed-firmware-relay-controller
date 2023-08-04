@@ -1,6 +1,7 @@
 #include "config.h"
 
 uint32_t uptime = 0;
+uint8_t blink = 0;
 
 static void boardInitGPIO(void)
 {

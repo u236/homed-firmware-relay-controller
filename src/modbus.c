@@ -167,6 +167,8 @@ void modbusHandler(uint8_t *data, uint8_t length)
     if (length < 8 || request.address != config.address || !crcCheck(data, length))
         return;
 
+    blink = 1;
+
     switch (request.function)
     {
         case MODBUS_READ_HOLDING_REGISERS:

@@ -55,16 +55,15 @@ void UART_HANDLER(void)
 void TICK_HANDLER(void)
 {
     static uint32_t tick = 0;
-    static uint8_t led = 1;
-
-    if (!(tick % 500))
-    {
-        GPIO_WriteBit(LED_GPIO, LED_PIN, led);
-        led ^= 1;
-    }
 
     if (!(tick % 1000))
         uptime++;
+
+    if (!(tick % 40))
+    {
+        GPIO_WriteBit(LED_GPIO, LED_PIN, GPIO_ReadOutputDataBit(LED_GPIO, LED_PIN) && blink ? 0 : 1);
+        blink = 0;
+    }
 
     tick++;
 }
